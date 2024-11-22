@@ -30,8 +30,11 @@
 
 import globals from "globals";
 import eslint from "@eslint/js";
-import tseslint from "@typescript-eslint/eslint-plugin";
+import tseslintPlugin from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
+
+/*Remove the commented import below for possible fix*/
+//import tseslint from "typescript-eslint";
 
 export default [
   // JavaScript files configuration
@@ -59,7 +62,7 @@ export default [
       parser: tsParser,
     },
     plugins: {
-      ts: tseslint,
+      ts: tseslintPlugin,
     },
     rules: {
       ...tseslint.configs.recommended.rules,
